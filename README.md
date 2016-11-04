@@ -72,11 +72,8 @@ composer install
 Now we should be all set! Run the application using the `php` command.
 
 ```bash
-php -S localhost:8000
+php -S localhost:8000 -t webroot
 ```
-
-Alternately, you could simple place the contents of this project directly in the
-webroot of your server and visit `index.html`.
 
 Your application should now be running at [http://localhost:8000/](http://localhost:8000/). 
 
