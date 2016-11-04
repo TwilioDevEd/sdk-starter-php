@@ -1,5 +1,6 @@
 <?php
 include('../vendor/autoload.php');
+include('./config.php');
 
 // Authenticate with Twilio
 $client = new Twilio\Rest\Client($TWILIO_API_KEY, $TWILIO_API_SECRET, $TWILIO_ACCOUNT_SID);
