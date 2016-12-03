@@ -44,13 +44,13 @@ if (!empty($deviceId) && !empty($TWILIO_SYNC_SERVICE_SID)) {
     $token->addGrant($syncGrant);
 }
 
-// Grant access to IP Messaging
-if (!empty($deviceId) && !empty($TWILIO_IPM_SERVICE_SID)) {
+// Grant access to Chat
+if (!empty($deviceId) && !empty($TWILIO_CHAT_SERVICE_SID)) {
     $endpointId = $appName . ':' . $identity . ':' . $deviceId;
-    $ipMessagingGrant = new IpMessagingGrant();
-    $ipMessagingGrant->setServiceSid($TWILIO_IPM_SERVICE_SID);
-    $ipMessagingGrant->setEndpointId($endpointId);
-    $token->addGrant($ipMessagingGrant);
+    $chatGrant = new IpMessagingGrant();
+    $chatGrant->setServiceSid($TWILIO_CHAT_SERVICE_SID);
+    $chatGrant->setEndpointId($endpointId);
+    $token->addGrant($chatGrant);
 }
 
 
