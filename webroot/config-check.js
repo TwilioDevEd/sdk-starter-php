@@ -5,8 +5,6 @@ $(function() {
         configureField(response, 'TWILIO_API_SECRET','twilioAPISecret',true);
         configureField(response, 'TWILIO_CONFIGURATION_SID','twilioConfigurationSID',false);
         configureField(response, 'TWILIO_NOTIFICATION_SERVICE_SID','twilioNotificationServiceSID',false);
-        configureField(response, 'TWILIO_APN_CREDENTIAL_SID','twilioAPNCredentialSID',false);
-        configureField(response, 'TWILIO_GCM_CREDENTIAL_SID','twilioGCMCredentialSID',false);
         configureField(response, 'TWILIO_CHAT_SERVICE_SID','twilioChatServiceSID',false);
         configureField(response, 'TWILIO_SYNC_SERVICE_SID','twilioSyncServiceSID',false);
 
@@ -55,7 +53,7 @@ $(function() {
                 $('#' + elementId).html('Configured properly');
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in .env');
+                $('#' + elementId).html('Not configured in config.php');
                 $('#' + elementId).addClass('unset');
             }
         } else {
@@ -63,7 +61,7 @@ $(function() {
                 $('#' + elementId).html(response[keyName]);
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in .env');
+                $('#' + elementId).html('Not configured in config.php');
                 $('#' + elementId).addClass('unset');
             }
         }
