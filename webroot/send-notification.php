@@ -12,10 +12,10 @@ $service = $client->notify->v1->services($TWILIO_NOTIFICATION_SERVICE_SID);
 
 try {
     $notification = $service->notifications->create(
-        array(
-            identity => $_POST['identity'], 
-            body => "Hello " + $_POST['identity'],
-        )
+        [
+            'identity' => $_POST['identity'], 
+            'body' => 'Hello ' . $_POST['identity']
+        ]
     );
     
     $response = array(
