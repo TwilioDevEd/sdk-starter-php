@@ -16,7 +16,7 @@ $appName = 'TwilioStarterDemo';
 $identity = randomUsername();
 
 
-// A device ID is passed as a query string parameter to this script for Sync and IP Messaging
+// A device ID is passed as a query string parameter to this script for Sync
 $deviceId = $_GET['device'];
 
 // Create access token, which we will serialize and send to the client
@@ -46,10 +46,8 @@ if (!empty($deviceId) && !empty($TWILIO_SYNC_SERVICE_SID)) {
 
 // Grant access to Chat
 if (!empty($deviceId) && !empty($TWILIO_CHAT_SERVICE_SID)) {
-    $endpointId = $appName . ':' . $identity . ':' . $deviceId;
     $chatGrant = new IpMessagingGrant();
     $chatGrant->setServiceSid($TWILIO_CHAT_SERVICE_SID);
-    $chatGrant->setEndpointId($endpointId);
     $token->addGrant($chatGrant);
 }
 
