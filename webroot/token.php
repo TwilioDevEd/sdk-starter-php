@@ -17,19 +17,17 @@ $identity = randomUsername();
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
-    $TWILIO_ACCOUNT_SID, 
-    $TWILIO_API_KEY, 
-    $TWILIO_API_SECRET, 
-    3600, 
+    $TWILIO_ACCOUNT_SID,
+    $TWILIO_API_KEY,
+    $TWILIO_API_SECRET,
+    3600,
     $identity
 );
 
 // Grant access to Video
-if (!empty($TWILIO_CONFIGURATION_SID)) {
-    $grant = new VideoGrant();
-    $grant->setConfigurationProfileSid($TWILIO_CONFIGURATION_SID);
-    $token->addGrant($grant);
-}
+$grant = new VideoGrant();
+$grant->setRoom('default room');
+$token->addGrant($grant);
 
 // Grant access to Sync
 if (!empty($TWILIO_SYNC_SERVICE_SID)) {
