@@ -26,7 +26,6 @@ $token = new AccessToken(
 
 // Grant access to Video
 $grant = new VideoGrant();
-$grant->setRoom('default room');
 $token->addGrant($grant);
 
 // Grant access to Sync
