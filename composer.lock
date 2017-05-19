@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3edee9f278c722ead9112d0aaeb96bba",
+    "content-hash": "44b35310e971755d5817fb6570b8fe1f",
     "packages": [
         {
             "name": "twilio/sdk",
-            "version": "5.8.0",
+            "version": "5.8.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "7ba0ff80e06190a75b8d30d9b0ae4f8a422be644"
+                "reference": "860db9bafd3be6e65d37418370836f52529da045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/7ba0ff80e06190a75b8d30d9b0ae4f8a422be644",
-                "reference": "7ba0ff80e06190a75b8d30d9b0ae4f8a422be644",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/860db9bafd3be6e65d37418370836f52529da045",
+                "reference": "860db9bafd3be6e65d37418370836f52529da045",
                 "shasum": ""
             },
             "require": {
@@ -50,13 +50,15 @@
                 "sms",
                 "twilio"
             ],
-            "time": "2017-04-27T10:16:26+00:00"
+            "time": "2017-04-27T11:02:42+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twilio/sdk": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
