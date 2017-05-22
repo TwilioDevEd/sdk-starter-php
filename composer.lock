@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "44b35310e971755d5817fb6570b8fe1f",
+    "content-hash": "215f39da49535763304be446c45a70f8",
     "packages": [
         {
             "name": "twilio/sdk",
-            "version": "5.8.0-alpha1",
+            "version": "5.9.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "860db9bafd3be6e65d37418370836f52529da045"
+                "reference": "478224aa229f28803a6908c01803b9e01f817094"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/860db9bafd3be6e65d37418370836f52529da045",
-                "reference": "860db9bafd3be6e65d37418370836f52529da045",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/478224aa229f28803a6908c01803b9e01f817094",
+                "reference": "478224aa229f28803a6908c01803b9e01f817094",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
                 "sms",
                 "twilio"
             ],
-            "time": "2017-04-27T11:02:42+00:00"
+            "time": "2017-05-22T21:58:55+00:00"
         }
     ],
     "packages-dev": [],
