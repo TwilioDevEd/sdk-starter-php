@@ -13,7 +13,6 @@ $json = json_decode(file_get_contents('php://input'), true);
 // Create a binding
 try {
     $binding = $service->bindings->create(
-        $json['endpoint'],
         $json['identity'],
         $json['BindingType'],
         $json['Address']
