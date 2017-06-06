@@ -5,7 +5,7 @@ include('./config.php');
 // Authenticate with Twilio
 $client = new Twilio\Rest\Client($TWILIO_API_KEY,$TWILIO_API_SECRET,$TWILIO_ACCOUNT_SID);
 
-// Send a notification 
+// Send a notification
 $service = $client->notify->v1->services($TWILIO_NOTIFICATION_SERVICE_SID);
 
 
@@ -13,11 +13,11 @@ $service = $client->notify->v1->services($TWILIO_NOTIFICATION_SERVICE_SID);
 try {
     $notification = $service->notifications->create(
         [
-            'identity' => $_POST['identity'], 
-            'body' => 'Hello ' . $_POST['identity']
+            'identity' => $_POST['identity'],
+            'body' => 'Hello world!'
         ]
     );
-    
+
     $response = array(
         message => 'Notification Sent!'
     );
@@ -31,4 +31,4 @@ try {
     header('Content-type:application/json;charset=utf-8');
     http_response_code(500);
     echo json_encode($response);
-} 
+}
