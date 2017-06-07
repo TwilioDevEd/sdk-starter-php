@@ -7,7 +7,7 @@ include('./config.php');
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
 use Twilio\Jwt\Grants\SyncGrant;
-use Twilio\Jwt\Grants\IPMessagingGrant;
+use Twilio\Jwt\Grants\IpMessagingGrant;
 
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioStarterDemo';
