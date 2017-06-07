@@ -1,12 +1,15 @@
 <?php
 include('../vendor/autoload.php');
-include('./config.php');
+
+// Load environment variables from .env, or environment if available
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 
 // Authenticate with Twilio
-$client = new Twilio\Rest\Client($TWILIO_API_KEY,$TWILIO_API_SECRET,$TWILIO_ACCOUNT_SID);
+$client = new Twilio\Rest\Client(getenv('TWILIO_API_KEY'), getenv('TWILIO_API_SECRET'), getenv('TWILIO_ACCOUNT_SID'));
 
 // Send a notification
-$service = $client->notify->v1->services($TWILIO_NOTIFICATION_SERVICE_SID);
+$service = $client->notify->v1->services(getenv('TWILIO_NOTIFICATION_SERVICE_SID'));
 
 
 

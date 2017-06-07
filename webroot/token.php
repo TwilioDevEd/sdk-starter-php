@@ -1,13 +1,16 @@
 <?php
 include('../vendor/autoload.php');
 include('./randos.php');
-include('./config.php');
 
 
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
 use Twilio\Jwt\Grants\SyncGrant;
 use Twilio\Jwt\Grants\IpMessagingGrant;
+
+// Load environment variables from .env, or environment if available
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
 
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioStarterDemo';
@@ -17,9 +20,9 @@ $identity = randomUsername();
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
-    $TWILIO_ACCOUNT_SID,
-    $TWILIO_API_KEY,
-    $TWILIO_API_SECRET,
+    getenv('TWILIO_ACCOUNT_SID'),
+    getenv('TWILIO_API_KEY'),
+    getenv('TWILIO_API_SECRET'),
     3600,
     $identity
 );
@@ -29,16 +32,16 @@ $grant = new VideoGrant();
 $token->addGrant($grant);
 
 // Grant access to Sync
-if (!empty($TWILIO_SYNC_SERVICE_SID)) {
+if (!empty(getenv('TWILIO_SYNC_SERVICE_SID'))) {
     $syncGrant = new SyncGrant();
-    $syncGrant->setServiceSid($TWILIO_SYNC_SERVICE_SID);
+    $syncGrant->setServiceSid(getenv('TWILIO_SYNC_SERVICE_SID'));
     $token->addGrant($syncGrant);
 }
 
 // Grant access to Chat
-if (!empty($TWILIO_CHAT_SERVICE_SID)) {
+if (!empty(getenv('TWILIO_CHAT_SERVICE_SID'))) {
     $chatGrant = new IpMessagingGrant();
-    $chatGrant->setServiceSid($TWILIO_CHAT_SERVICE_SID);
+    $chatGrant->setServiceSid(getenv('TWILIO_CHAT_SERVICE_SID'));
     $token->addGrant($chatGrant);
 }
 
