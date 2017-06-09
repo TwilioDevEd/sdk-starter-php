@@ -14,14 +14,14 @@ Let's get started!
 ## Configure the sample application
 
 To run the application, you'll need to gather your Twilio account credentials and configure them
-in a file named `config.php` in the `webroot` directory. To create this file from an example template, do the following in your
+in a file named `.env` in the `webroot` directory. To create this file from an example template, do the following in your
 Terminal.
 
 ```bash
-cp config.php.example config.php
+cp .env.example .env
 ```
 
-Open `config.php` in your favorite text editor and configure the following values.
+Open `.env` in your favorite text editor and configure the following values.
 
 ### Configure account information
 
@@ -41,7 +41,7 @@ make sure to save this information in a secure location, or possibly your `~/.ba
 ### Configure product-specific settings
 
 Depending on which demos you'd like to run, you'll need to configure a few more values in your
-`config.php` file.
+`.env` file.
 
 | Config Value  | Product Demo | Description |
 | :-------------  |:------------- |:------------- |

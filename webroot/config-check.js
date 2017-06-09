@@ -46,7 +46,7 @@ $(function() {
                 $('#' + elementId).html('Configured properly');
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in config.php');
+                $('#' + elementId).html('Not configured in .env');
                 $('#' + elementId).addClass('unset');
             }
         } else {
@@ -54,7 +54,7 @@ $(function() {
                 $('#' + elementId).html(response[keyName]);
                 $('#' + elementId).addClass('set');
             } else {
-                $('#' + elementId).html('Not configured in config.php');
+                $('#' + elementId).html('Not configured in .env');
                 $('#' + elementId).addClass('unset');
             }
         }
