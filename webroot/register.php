@@ -22,14 +22,14 @@ try {
     );
     
     $response = array(
-        message => 'Binding created'
+        'message' => 'Binding created'
     );
     header('Content-type:application/json;charset=utf-8');
     echo json_encode($response);
 } catch (Exception $e) {
     $response = array(
-        message => 'Error creating binding: ' . $e->getMessage(),
-        error => $e->getMessage()
+        'message' => 'Error creating binding: ' . $e->getMessage(),
+        'error' => $e->getMessage()
     );
     header('Content-type:application/json;charset=utf-8');
     http_response_code(500);
