@@ -6,7 +6,7 @@ include('./randos.php');
 use Twilio\Jwt\AccessToken;
 use Twilio\Jwt\Grants\VideoGrant;
 use Twilio\Jwt\Grants\SyncGrant;
-use Twilio\Jwt\Grants\IpMessagingGrant;
+use Twilio\Jwt\Grants\ChatGrant;
 
 // Load environment variables from .env, or environment if available
 $dotenv = new Dotenv\Dotenv(__DIR__);
@@ -32,15 +32,17 @@ $grant = new VideoGrant();
 $token->addGrant($grant);
 
 // Grant access to Sync
-if (!empty(getenv('TWILIO_SYNC_SERVICE_SID'))) {
-    $syncGrant = new SyncGrant();
+$syncGrant = new SyncGrant();
+if (empty(getenv('TWILIO_SYNC_SERVICE_SID'))) {
+    $syncGrant->setServiceSid('default');
+} else  {
     $syncGrant->setServiceSid(getenv('TWILIO_SYNC_SERVICE_SID'));
-    $token->addGrant($syncGrant);
-}
+}  
+$token->addGrant($syncGrant);
 
 // Grant access to Chat
 if (!empty(getenv('TWILIO_CHAT_SERVICE_SID'))) {
-    $chatGrant = new IpMessagingGrant();
+    $chatGrant = new ChatGrant();
     $chatGrant->setServiceSid(getenv('TWILIO_CHAT_SERVICE_SID'));
     $token->addGrant($chatGrant);
 }
