@@ -14,7 +14,7 @@ if (empty($syncServiceSID)) {
 // Ensure that the Sync Default Service is provisioned
 if ($syncServiceSID === 'default') {
     $client = new Twilio\Rest\Client(getenv('TWILIO_API_KEY'), getenv('TWILIO_API_SECRET'), getenv('TWILIO_ACCOUNT_SID'));
-    $client->sync->v1->services($syncServiceSID)->fetch();
+    $client->sync->services($syncServiceSID)->fetch();
 }
 
 echo json_encode(array(
