@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e894906a838495fcdde172eee663a968",
+    "hash": "e87598bf97330d804ca530cc6c66509e",
+    "content-hash": "aa780b9c5bf4300257e06a92981b2260",
     "packages": [
         {
             "name": "twilio/sdk",
-            "version": "5.15.3",
+            "version": "5.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twilio/twilio-php.git",
-                "reference": "3d89aabdf3f7bec20aeb3850562db17bd46ff7f9"
+                "reference": "61d9cb7223ee1364b752d7e36298dfb60697120d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/3d89aabdf3f7bec20aeb3850562db17bd46ff7f9",
-                "reference": "3d89aabdf3f7bec20aeb3850562db17bd46ff7f9",
+                "url": "https://api.github.com/repos/twilio/twilio-php/zipball/61d9cb7223ee1364b752d7e36298dfb60697120d",
+                "reference": "61d9cb7223ee1364b752d7e36298dfb60697120d",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +51,7 @@
                 "sms",
                 "twilio"
             ],
-            "time": "2017-10-20T22:58:45+00:00"
+            "time": "2018-05-18 18:34:51"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -58,19 +59,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "828d19e597052ddeee65890bb2b1a0912d79fea8"
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/828d19e597052ddeee65890bb2b1a0912d79fea8",
-                "reference": "828d19e597052ddeee65890bb2b1a0912d79fea8",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fe2a5c22c94949983be10263417f47f8551d5946",
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
             },
             "type": "library",
             "extra": {
@@ -85,7 +86,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause-Attribution"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -100,7 +101,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2017-10-10 06:32:45"
+            "time": "2018-03-19 21:27:48"
         }
     ],
     "packages-dev": [],
