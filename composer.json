@@ -1,6 +1,6 @@
 {
     "require": {
-        "twilio/sdk": "5.19.1",
+        "twilio/sdk": "5.22.0",
         "vlucas/phpdotenv": "dev-master"
     }
 }
