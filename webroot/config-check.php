@@ -2,7 +2,7 @@
 include('../vendor/autoload.php');
 
 // Load environment variables from .env, or environment if available
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
 header('Content-type:application/json;charset=utf-8');
