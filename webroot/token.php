@@ -9,7 +9,7 @@ use Twilio\Jwt\Grants\SyncGrant;
 use Twilio\Jwt\Grants\ChatGrant;
 
 // Load environment variables from .env, or environment if available
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
 // An identifier for your app - can be anything you'd like
