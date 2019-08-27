@@ -89,12 +89,11 @@ Check your config values, and follow the links to the demo applications!
 
 ## Warning: You may need to update the phpdotenv dependency
 
-The phpdotenv dependency (for loading configuration information) was recently updated, so you may need to run composer update on your directory if you have downloaded this project in the past. For new installations, this step won't be necessary. The error you will get is:
+The phpdotenv dependency (for loading configuration information) was recently updated, so you may need to run `composer update` on your project if you have downloaded this project in the past. For new installations, this step won't be necessary. The error you will get is:
 
 ```
 /config-check.php - Uncaught Error: Call to undefined method Dotenv\Dotenv::create()
 ```
-
 
 ## Running the SDK Starter Kit with ngrok
 
