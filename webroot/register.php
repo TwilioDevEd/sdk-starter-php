@@ -2,7 +2,7 @@
 include('../vendor/autoload.php');
 
 // Load environment variables from .env, or environment if available
-$dotenv = Dotenv\Dotenv::create(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Authenticate with Twilio
