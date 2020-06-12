@@ -15,8 +15,11 @@ $dotenv->load();
 // An identifier for your app - can be anything you'd like
 $appName = 'TwilioStarterDemo';
 
-// choose a random username for the connecting user
-$identity = randomUsername();
+$identity = $_GET['identity'];
+if (empty($identity)) {
+    // choose a random username for the connecting user (if one is not supplied)
+    $identity = randomUsername();
+}
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
