@@ -6,10 +6,10 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // Authenticate with Twilio
-$client = new Twilio\Rest\Client(getenv('TWILIO_API_KEY'), getenv('TWILIO_API_SECRET'), getenv('TWILIO_ACCOUNT_SID'));
+$client = new Twilio\Rest\Client($_ENV['TWILIO_API_KEY'], $_ENV['TWILIO_API_SECRET'], $_ENV['TWILIO_ACCOUNT_SID']);
 
 // Get a reference to the user notification service instance
-$service = $client->notify->v1->services(getenv('TWILIO_NOTIFICATION_SERVICE_SID'));
+$service = $client->notify->v1->services($_ENV['TWILIO_NOTIFICATION_SERVICE_SID']);
 
 $json = json_decode(file_get_contents('php://input'), true);
 

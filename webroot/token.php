@@ -23,9 +23,9 @@ if (empty($identity)) {
 
 // Create access token, which we will serialize and send to the client
 $token = new AccessToken(
-    getenv('TWILIO_ACCOUNT_SID'),
-    getenv('TWILIO_API_KEY'),
-    getenv('TWILIO_API_SECRET'),
+    $_ENV['TWILIO_ACCOUNT_SID'],
+    $_ENV['TWILIO_API_KEY'],
+    $_ENV['TWILIO_API_SECRET'],
     3600,
     $identity
 );
@@ -36,17 +36,17 @@ $token->addGrant($grant);
 
 // Grant access to Sync
 $syncGrant = new SyncGrant();
-if (empty(getenv('TWILIO_SYNC_SERVICE_SID'))) {
+if (empty($_ENV['TWILIO_SYNC_SERVICE_SID'])) {
     $syncGrant->setServiceSid('default');
 } else  {
-    $syncGrant->setServiceSid(getenv('TWILIO_SYNC_SERVICE_SID'));
+    $syncGrant->setServiceSid($_ENV['TWILIO_SYNC_SERVICE_SID']);
 }  
 $token->addGrant($syncGrant);
 
 // Grant access to Chat
-if (!empty(getenv('TWILIO_CHAT_SERVICE_SID'))) {
+if (!empty($_ENV['TWILIO_CHAT_SERVICE_SID'])) {
     $chatGrant = new ChatGrant();
-    $chatGrant->setServiceSid(getenv('TWILIO_CHAT_SERVICE_SID'));
+    $chatGrant->setServiceSid($_ENV['TWILIO_CHAT_SERVICE_SID']);
     $token->addGrant($chatGrant);
 }
 
