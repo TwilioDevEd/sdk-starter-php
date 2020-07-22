@@ -40,7 +40,7 @@ $(function() {
   // Alert the user they have been assigned a random username
   print('Logging in...');
 
-  // Get an access token for the current user
+  // Get an access token for the current user, passing a username (identity)
   $.getJSON('/token.php', function(data) {
 
 
@@ -76,7 +76,7 @@ $(function() {
     console.log('Token about to expire');
     // Make a secure request to your backend to retrieve a refreshed access token.
     // Use an authentication mechanism to prevent token exposure to 3rd parties.
-    $.getJSON('/token.php', {identity, identity}, function(data) {
+    $.getJSON('/token/' + identity, function(data) {
       console.log('updated token for chat client');          
       chatClient.updateToken(data.token);
     });
