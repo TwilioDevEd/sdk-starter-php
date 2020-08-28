@@ -12,10 +12,12 @@ use Twilio\Jwt\Grants\ChatGrant;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// An identifier for your app - can be anything you'd like
-$appName = 'TwilioStarterDemo';
+$identity = '';
 
-$identity = $_GET['identity'];
+if (isset($_GET['identity'])) {
+    $identity = $_GET['identity'];
+}
+
 if (empty($identity)) {
     // choose a random username for the connecting user (if one is not supplied)
     $identity = randomUsername();
