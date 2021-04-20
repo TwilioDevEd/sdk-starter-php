@@ -6,7 +6,7 @@ function randomUsername() {
         'Awesome', 'Bold', 'Creative', 'Dapper', 'Eccentric', 'Fiesty', 'Golden',
         'Holy', 'Ignominious', 'Jolly', 'Kindly', 'Lucky', 'Mushy', 'Natural',
         'Oaken', 'Precise', 'Quiet', 'Rowdy', 'Sunny', 'Tall',
-        'Unique', 'Vivacious', 'Wonderful', 'Xtra', 'Yawning', 'Zesty',
+        'Unique', 'Vivid', 'Wonderful', 'Xtra', 'Yawning', 'Zesty',
     );
 
     $FIRST_NAMES = array(
