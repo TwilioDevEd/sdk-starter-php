@@ -23,6 +23,10 @@ cp .env.example .env
 
 Open `.env` in your favorite text editor and configure the following values.
 
+On production, to avoid showing errors, you should set the variable `DISPLAY_ERRORS` to 
+`0`. For development, it can be set to `1` on development. For more information, read 
+[this](https://phpdelusions.net/articles/error_reporting)
+
 ### Configure account information
 
 Every sample in the demo requires some basic credentials from your Twilio account. Configure these first.

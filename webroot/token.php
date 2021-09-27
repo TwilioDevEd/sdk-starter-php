@@ -12,6 +12,9 @@ use Twilio\Jwt\Grants\ChatGrant;
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+$DISPLAY_ERRORS = $_ENV['DISPLAY_ERRORS'];
+ini_set('display_errors', $DISPLAY_ERRORS);
+
 $identity = '';
 
 if (isset($_GET['identity'])) {
