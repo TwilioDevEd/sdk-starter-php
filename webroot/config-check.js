@@ -23,7 +23,7 @@ $(function() {
   };
 
   var configureField = function(fields, response) {
-    var htmlContent = 'Not configured in config.php';
+    var htmlContent = 'Not configured in .env';
     var cssClass = 'unset';
     return function(fieldId) {
       var configKey = strToConfig(fieldId);
